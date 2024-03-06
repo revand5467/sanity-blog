@@ -1,6 +1,7 @@
 import { fullBlog } from '@/app/lib/interface';
 import { client } from '@/app/lib/sanity';
 import React from 'react'
+export const revalidate = 30;
 async function getData(slug: string) {
     const query = `
       *[_type == "blog" && slug.current == '${slug}'] {
